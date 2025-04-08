@@ -1,0 +1,423 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #9163cb, #c3aed6, #f8f7fc);
+
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #3C0663, #5A108F);
+    padding: 12px 18px;
+    color: white;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+}
+
+/* Logo */
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #FFC8F2, #D283FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(45deg, #D283FF, #C0FDFF);
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.search-box input {
+    border: none;
+    padding: 6px;
+    width: 180px;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 14px;
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #AB51E3;
+}
+
+/* Real-time Clock */
+.clock {
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #D8BBFF, #C0FDFF);
+    color: #310055;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-left: 10px;
+    text-align: center;
+    min-width: 55px;
+    font-weight: bold;
+}
+
+/* Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+/* Gradient Hover Effect */
+.nav-links a:hover {
+    background: linear-gradient(90deg, #E5B3FE, #BD68EE);
+    color: #310055;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(45deg, #5A108F, #8B2FC9);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+    display: none;
+    list-style: none;
+    padding: 0;
+    min-width: 140px;
+    border-radius: 8px;
+}
+
+.dropdown-menu li {
+    padding: 8px 10px;
+}
+
+.dropdown-menu a {
+    color: #E2AFFF;
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Profile Section */
+.profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #D283FF;
+}
+
+/* Profile Dropdown */
+.profile-menu {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: linear-gradient(45deg, #C0FDFF, #AB51E3);
+    color: white;
+    list-style: none;
+    padding: 0;
+    width: 150px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    border-radius: 6px;
+}
+
+.profile-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #BD68EE;
+}
+
+.profile-menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 14px;
+}
+
+/* Gradient Hover Effect for Profile Dropdown */
+.profile-menu a:hover {
+    background: linear-gradient(90deg, #E5B3FE, #D283FF);
+    color: #310055;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* New Hover Effect - Slide Down */
+.profile:hover .profile-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Banner Section */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    background: url('images/backgroundImg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Optional: Gradient Overlay */
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(222, 211, 230, 0.7), rgba(104, 24, 165, 0.4));
+}
+
+/* Banner Content */
+.banner-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.banner h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+/* CTA Button */
+.banner .cta-button {
+    background: linear-gradient(45deg, #D283FF, #AB51E3);
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.banner .cta-button:hover {
+    background: linear-gradient(90deg, #E5B3FE, #DC97FF);
+    color: #310055;
+    font-weight: bold;
+}
+
+/* Floating Sub-Navigation */
+.sub-nav-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: -30px; /* Moves the sub-nav slightly up */
+}
+
+.sub-nav {
+    background: white;
+    padding: 2rem;  /* Adjust padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 10px; /* Rounded floating design */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    min-width: 500px; /* Ensures it doesn’t spread too much */
+    border: 2px solid #8B2FC9;
+    z-index: 15;
+    transform: translateY(-50%); 
+}
+
+/* Sub-Navigation Links */
+.sub-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    border-radius: 6px;
+}
+
+.sub-nav-links a:hover {
+    color: #5A108F;
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    list-style: none;
+    padding: 0;
+    min-width: 120px;
+}
+
+.dropdown-menu li {
+    padding: 8px 10px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.dropdown-menu a {
+    color: black;
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Content Cards (Float and Don't Take Full Width) */
+.content-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px; /* Fixed width instead of full screen */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Task Area Box */
+.task-area-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin: 40px auto; /* Adds space from sub-nav */
+    text-align: center;
+    border: 2px solid #8B2FC9;
+}
+
+/* Task Description */
+.task-area-container p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Create Button */
+.task-area-container button {
+    background: linear-gradient(45deg, #D283FF, #AB51E3);
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.task-area-container button:hover {
+    background: linear-gradient(90deg, #E5B3FE, #DC97FF);
+    color: #310055;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: linear-gradient(45deg, #5A108F, #8B2FC9);
+        position: absolute;
+        top: 55px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .search-box {
+        display: none;
+    }
+}

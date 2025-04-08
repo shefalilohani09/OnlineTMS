@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Task Manager</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+ <!-- Navbar -->
+ <nav class="navbar">
+    <div class="logo">DoneZo</div>
+
+    <!-- Search Bar -->
+    <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <button>🔍</button>
+    </div>
+
+    <div id="clock" class="clock"></div> <!-- Real-time Clock -->
+
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Tasks</a></li>
+        <li><a href="#">Calendar</a></li>
+      
+    </ul>
+
+    <!-- Profile Section with Dropdown -->
+    <div class="profile" id="profile">
+        <img src="images/profilePic.png" alt="Profile">
+        <ul class="profile-menu" id="profileMenu">
+            <li><a href="profile.html">My Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="signup.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</nav>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form onsubmit="loginUser(event)">
+            <input type="text" id="loginUser" placeholder="Username" required>
+            <input type="password" id="loginPass" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

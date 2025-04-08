@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Task</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Create Task</h2>
+        <form id="taskForm">
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" required></textarea>
+
+            <label for="assignedBy">Assigned By:</label>
+            <input type="text" id="assignedBy" required>
+
+            <label for="startDate">Starting Date:</label>
+            <input type="date" id="startDate" required>
+
+            <label for="deadline">Deadline:</label>
+            <input type="date" id="deadline" required>
+
+            <label for="participants">Participants:</label>
+            <select id="participants" multiple>
+                <option value="User 1">User 1</option>
+                <option value="User 2">User 2</option>
+                <option value="User 3">User 3</option>
+                <option value="User 4">User 4</option>
+            </select>
+
+            <label for="notes">Add Note:</label>
+            <textarea id="notes"></textarea>
+
+            <label for="timePlanning">Time Planning (Working Hours):</label>
+            <input type="number" id="timePlanning" min="1" max="24" required>
+
+            <button type="submit">Create Task</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("taskForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let task = {
+                name: document.getElementById("taskName").value,
+                description: document.getElementById("description").value,
+                assignedBy: document.getElementById("assignedBy").value,
+                startDate: document.getElementById("startDate").value,
+                deadline: document.getElementById("deadline").value,
+                participants: Array.from(document.getElementById("participants").selectedOptions).map(option => option.value),
+                notes: document.getElementById("notes").value,
+                timePlanning: document.getElementById("timePlanning").value
+            };
+
+            console.log("Task Created:", task);
+            alert("Task Created Successfully!");
+
+            document.getElementById("taskForm").reset();
+        });
+    </script>
+</body>
+</html>

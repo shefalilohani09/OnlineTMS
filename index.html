@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home DoneZo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">DoneZo</div>
+
+        <!-- Search Bar -->
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button>🔍</button>
+        </div>
+
+        <div id="clock" class="clock"></div> <!-- Real-time Clock -->
+
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Tasks</a></li>
+            <li><a href="calender.html">Calendar</a></li>
+          
+        </ul>
+
+        <!-- Profile Section with Dropdown -->
+        <div class="profile" id="profile">
+            <img src="images/profilePic.png" alt="Profile">
+            <ul class="profile-menu" id="profileMenu">
+                <li><a href="profile.html">My Profile</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="signup.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <!-- banner section -->
+    <div class="banner">
+        <div class="banner-content">
+            <h1>Welcome to Task Manager</h1>
+            <p>Organize, track, and complete your tasks efficiently</p>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </div>
+
+    <!-- Horizontal Navigation Menu -->
+<div class="sub-nav">
+    <ul class="sub-nav-links">
+        <li><a href="#">Tasks</a></li>
+        <li><a href="#">Ongoing</a></li>
+        <li><a href="#">Assisting</a></li>
+        <li><a href="#">Set by me</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Recycle Bin</a></li>
+       
+    </ul>
+</div>
+
+<!-- Task Area Box -->
+<div class="task-area-container">
+    <p>Add and manage your tasks easily. Click "Create" to start a new task.</p>
+    <button onclick="redirectToCreateTask()">Create Task</button>
+    
+</div>
+
+
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

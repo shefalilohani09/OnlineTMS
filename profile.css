@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #240046, #5a189a);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background: #3b0f72;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email {
+    font-size: 18px;
+}
+
+
+.profile-pic-navbar {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    margin-right: 20px; /* Space between image and email */
+}
+
+.nav-buttons button {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 15px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Sub Navigation */
+.sub-navbar {
+    background: #4a0a77;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-navbar button {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.sub-navbar .active {
+    border-bottom: 2px solid white;
+}
+
+
+.efficiency {
+    font-weight: bold;
+    color: #FFDD57;
+}
+
+/* Profile Section */
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+/* Sidebar */
+.profile-section {
+    width: 30%;
+    padding: 20px;
+}
+
+.profile-info {
+    text-align: center;
+    background: #5a189a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.status {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Widgets */
+.widget {
+    background: #7251b5;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Info Section */
+.info-section {
+    width: 70%;
+}
+
+.info-box {
+    background: #6247aa;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.edit-btn {
+    float: right;
+    background: #7b2cbf;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.footer button {
+    background: #7b2cbf;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}

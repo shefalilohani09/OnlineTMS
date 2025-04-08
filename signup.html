@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | Task Manager</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+      <button type="button" onclick="sendOTP()">Register</button>
+    </form>
+
+    <div id="otpSection" style="display:none;">
+      <p>Enter the OTP sent to your email:</p>
+      <input type="text" id="otp" placeholder="Enter OTP" />
+      <button onclick="verifyOTP()">Verify OTP</button>
+    </div>
+
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>

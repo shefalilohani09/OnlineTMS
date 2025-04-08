@@ -1,0 +1,199 @@
+/* Color Palette */
+:root {
+    --dark-purple: #240046;
+    --medium-purple: #5a189a;
+    --lavender: #9163cb;
+    --soft-purple: #7251b5;
+    --light-purple: #6247aa;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--white);
+    background: linear-gradient(135deg, #9163cb, #c3aed6, #f8f7fc);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.settings-container {
+    background: var(--lavender);
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: var(--white);
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.main-tools {
+    background: var(--light-purple);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+h3 {
+    color: var(--white);
+}
+
+.info-box {
+    background: var(--soft-purple);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.tool-list {
+    margin-top: 10px;
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    color: var(--dark-purple);
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.access-btn {
+    background: var(--medium-purple);
+    color: var(--white);
+}
+
+.open-btn {
+    background: var(--soft-purple);
+    color: var(--white);
+}
+
+.settings-btn {
+    background: var(--light-purple);
+    color: var(--white);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.save-btn {
+    background: #b2f302;
+    padding: 8px 15px;
+    font-weight: bold;
+}
+
+.cancel-btn {
+    background: var(--dark-purple);
+    color: var(--white);
+    padding: 8px 15px;
+}
+
+.save-btn:hover, .cancel-btn:hover {
+    opacity: 0.8;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--soft-purple);
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background: var(--white);
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background: var(--medium-purple);
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+/* Modal Popup Styles */
+.popup-modal {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: var(--light-purple);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup-modal p {
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    background: var(--medium-purple);
+    color: var(--white);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    background: var(--dark-purple);
+}
+
